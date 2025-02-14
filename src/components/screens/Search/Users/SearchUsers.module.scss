@@ -1,0 +1,70 @@
+@import 'variables';
+
+.root {
+  background-color: var(--background-card);
+  padding: 20px;
+  border-radius: 15px;
+
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+
+    a {
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+
+    .avatar {
+      height: 43px;
+    }
+
+    img {
+      border-radius: 50%;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      margin-left: 8px;
+
+      .name {
+        font-size: 16px;
+        color: var(--text-color-primary);
+      }
+
+      .subscribers {
+        opacity: 0.9;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .showMoreButton {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 0;
+    margin: 15px 0 0 1.5px;
+    color: var(--main-color);
+
+    svg {
+      margin-left: 2px;
+      width: 23.5px;
+      height: 23.5px;
+      stroke-width: 1.5;
+    }
+
+    &:hover {
+      color: var(--main-color-hover);
+    }
+  }
+}

@@ -1,0 +1,113 @@
+@import 'variables';
+
+.root {
+  position: relative;
+
+  .showBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+
+    @media (max-width: 991.98px) {
+      display: none;
+    }
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .window {
+    position: absolute;
+    top: 3.4rem;
+    right: 0px;
+    padding: 10px;
+    background-color: var(--background-card);
+    border-radius: 15px;
+    box-shadow: var(--floating-shadow);
+    width: 22rem;
+    z-index: 100000;
+
+    @media (max-width: 991.98px) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: calc(100% - 20px);
+    }
+
+    .profile {
+      display: grid;
+      grid-template-columns: 0.3fr 1fr;
+      gap: 3px;
+      align-items: center;
+      cursor: pointer;
+      padding: 8px 10px;
+      border-radius: 15px;
+
+      @media (max-width: 991.98px) {
+        grid-template-columns: 0.05fr 1fr;
+        gap: 15px;
+      }
+
+      span {
+        display: block;
+      }
+
+      .avatar {
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .title {
+        font-size: 21px;
+        font-weight: 600;
+      }
+
+      .subtitle {
+        color: var(--text-color-secondary);
+        font-size: 15px;
+        margin-top: 2.5px;
+      }
+
+      &:hover {
+        background-color: var(--background-hover-secondary);
+      }
+    }
+
+    .menu {
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--background-hover-secondary);
+
+      .item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 9px 15px;
+        border-radius: 10px;
+
+        svg {
+          width: 29px;
+          height: 29px;
+          stroke-width: 1.7px;
+        }
+
+        .label {
+          font-size: 16px;
+          font-weight: 600;
+          margin-left: 13px;
+          margin-top: 2px;
+        }
+
+        &:hover {
+          background-color: var(--background-hover-secondary);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  svg {
+    color: var(--text-color-secondary) !important;
+    position: absolute;
+    left: 13px;
+  }
+
+  input {
+    width: 100%;
+    padding: 13.5px 10px 12.5px 49px;
+    background-color: var(--button-secondary);
+    font-size: 16px;
+    border: none;
+  }
+
+  .window {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: var(--background-card);
+    box-shadow: var(--floating-shadow);
+    width: 100%;
+    border-radius: 10px;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      width: 100%;
+      border-radius: 10px;
+      padding: 9px;
+
+      svg {
+        position: relative;
+        left: 0;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+      }
+
+      &:hover {
+        background-color: var(--button-secondary);
+      }
+    }
+  }
+
+  @media (max-width: 1240px) {
+    justify-content: flex-end;
+
+    input {
+      width: 83.3%;
+    }
+
+    svg {
+      left: 70px;
+    }
+
+    .window {
+      left: 55px;
+      width: 92%;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    svg {
+      left: 47px;
+    }
+
+    input {
+      width: 82%;
+    }
+
+    .window {
+      left: 30px;
+      width: 94%;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    display: none;
+  }
+}

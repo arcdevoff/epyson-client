@@ -1,0 +1,45 @@
+@import 'variables';
+
+.root {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--background-color);
+  box-shadow: var(--floating-shadow);
+  left: 0;
+  right: 0;
+  align-items: center;
+  padding: 10px 4.5% 8px 4.5%;
+  z-index: 100000;
+
+  @media (min-width: 991.98px) {
+    display: none;
+  }
+
+  .item {
+    cursor: pointer;
+    position: relative;
+
+    &.active {
+      svg {
+        stroke: var(--main-color);
+      }
+    }
+
+    .counter {
+      position: absolute;
+      top: -3px;
+      right: 2px;
+      background: var(--color-signal-negative-default);
+      color: #fff;
+      width: 16px;
+      height: 16px;
+      display: flex;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+  }
+}

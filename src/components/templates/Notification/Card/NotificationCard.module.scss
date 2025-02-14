@@ -1,0 +1,56 @@
+@import 'variables';
+
+.root {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr;
+  gap: 12px;
+  align-items: center;
+  position: relative;
+
+  @media (max-width: 991.98px) {
+    grid-template-columns: 0.05fr 1fr;
+    gap: 15px;
+  }
+
+  .left {
+    height: 35px;
+
+    .icon {
+      width: 23px;
+      height: 23px;
+      padding: 6px;
+      border-radius: 50%;
+
+      &.like {
+        color: var(--color-signal-negative-default);
+        background-color: #e5545e1e;
+      }
+
+      &.subscribe {
+        color: var(--main-color);
+        background-color: rgb(61 182 255 / 12%);
+      }
+
+      &.reply_comment,
+      &.comment {
+        color: var(--color-signal-positive-default);
+        background-color: #30b03d1c;
+      }
+    }
+  }
+
+  .right {
+    .text {
+      font-size: 15px;
+      word-break: break-all;
+    }
+
+    .date {
+      display: block;
+      font-size: 13px;
+      margin-top: 2px;
+      opacity: 0.8;
+    }
+  }
+}

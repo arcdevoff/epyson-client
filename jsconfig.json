@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "variables": ["/src/styles/variables.scss"]
+    }
+  }
+}

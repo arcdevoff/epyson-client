@@ -1,0 +1,69 @@
+@import 'variables';
+
+.root {
+  .socials {
+    border: 1px solid var(--separator);
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+
+    .title {
+      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: 17px;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      .vk,
+      .telegram {
+        height: 44px;
+        border-radius: 10px;
+        background-color: var(--button-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          width: 30px;
+          height: 30px;
+          fill: var(--button-secondary-hover);
+        }
+
+        @media (max-width: 500px) {
+          height: 41px;
+
+          svg {
+            width: 28px;
+            height: 28px;
+          }
+        }
+      }
+
+      .vk {
+        &:focus,
+        &:hover {
+          background-color: #0077ff;
+
+          svg {
+            fill: #ffffff;
+          }
+        }
+      }
+
+      .telegram {
+        &:focus,
+        &:hover {
+          background-color: #54a9eb;
+
+          svg {
+            fill: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,321 @@
+@import 'variables';
+
+.root {
+  position: relative;
+  background-color: var(--background-card);
+  border-radius: 10px;
+  padding: 15px 17px 17px 17px;
+  margin-bottom: 1.5rem;
+
+  blockquote {
+    margin: 5px 0px 5px 3.5px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    .right {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .topicAvatar {
+        width: 34.5px;
+        height: 34.5px;
+        margin-right: 8px;
+
+        img {
+          width: 34.5px;
+          height: 34.5px;
+          border-radius: 50%;
+        }
+
+        @media (max-width: 991.98px) {
+          width: 34px;
+          height: 34px;
+
+          img {
+            width: 34px;
+            height: 34px;
+          }
+        }
+      }
+
+      .topic {
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .author,
+      .topic {
+        color: var(--text-color-primary);
+
+        &:hover {
+          color: var(--main-color);
+        }
+      }
+
+      .date,
+      .author {
+        font-size: 14px;
+      }
+
+      .date {
+        color: var(--text-color-secondary);
+        margin-left: 7px;
+      }
+    }
+
+    .left {
+      position: relative;
+
+      .actions {
+        .showButton {
+          width: 35px;
+          height: 35px;
+          margin-right: -4px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+
+          &:hover {
+            background-color: var(--background-hover-secondary);
+          }
+        }
+      }
+    }
+  }
+
+  .attachments {
+    position: relative;
+
+    .attachment {
+      display: none;
+      background-color: var(--button-secondary);
+      border-radius: 5px;
+
+      &.active {
+        display: block;
+      }
+
+      img,
+      video {
+        width: 100%;
+        object-fit: contain;
+        height: 22rem;
+      }
+    }
+
+    .control {
+      display: contents;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      .next,
+      .previous {
+        top: 24%;
+        height: 50%;
+        position: absolute;
+        width: 80px;
+        background: transparent;
+      }
+
+      .next {
+        right: 0;
+        text-align: right;
+
+        svg {
+          margin-right: 5px;
+        }
+      }
+
+      .previous {
+        left: 0;
+        text-align: left;
+
+        svg {
+          margin-left: 5px;
+        }
+      }
+
+      svg {
+        background-color: rgb(229 229 234);
+        color: #000000;
+        padding: 4px;
+        border-radius: 50%;
+        width: 23px;
+        height: 23px;
+      }
+
+      .current {
+        background-color: #00000024;
+        backdrop-filter: blur(5px);
+        position: absolute;
+        top: 12px;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0 9px;
+        text-align: center;
+        border-radius: 10px;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+
+        svg {
+          cursor: pointer;
+          background: none;
+          color: #adadad;
+          width: 7px;
+          height: 7px;
+
+          &.active {
+            color: #181818;
+          }
+        }
+      }
+    }
+  }
+
+  .text {
+    margin: 1rem 0;
+    word-break: break-all;
+
+    p {
+      margin: 0;
+    }
+
+    .showFullText {
+      button {
+        margin: 15px auto;
+        display: block;
+        color: var(--main-color);
+        font-size: 16px;
+        background-color: var(--button-secondary);
+        width: fit-content;
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0 0.8rem 0;
+
+    .tag {
+      margin-right: 7px;
+    }
+  }
+
+  .footer {
+    padding-left: 2px;
+
+    button {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      background: none;
+      margin-right: 25px;
+
+      span {
+        font-size: 15px;
+      }
+
+      svg {
+        width: 23px;
+        margin-right: 3px;
+        padding: 3.5px;
+        stroke-width: 1.5px;
+        border-radius: 50%;
+      }
+    }
+
+    .flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .left {
+        display: flex;
+        align-items: center;
+
+        .like {
+          margin-left: -5px;
+
+          &.active,
+          &:hover {
+            color: var(--color-signal-negative-default);
+
+            svg {
+              color: var(--color-signal-negative-default);
+              background-color: #e5545e1e;
+            }
+          }
+
+          &.active {
+            svg {
+              fill: var(--color-signal-negative-default);
+            }
+          }
+        }
+
+        .comments {
+          margin-left: -5px;
+
+          &:hover {
+            color: var(--main-color);
+
+            svg {
+              color: var(--main-color);
+              background-color: #079cf910;
+            }
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+
+        .share {
+          button {
+            margin-right: 0;
+
+            svg {
+              width: 25px;
+              height: 25px;
+              margin-right: 0;
+            }
+
+            &:hover {
+              color: var(--color-signal-positive-default);
+
+              svg {
+                background-color: #30b03d1c;
+              }
+            }
+          }
+        }
+
+        .views {
+          margin-right: 10px;
+          color: var(--text-color-secondary);
+
+          svg {
+            width: 25px;
+            height: 25px;
+            margin-right: 2px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import 'variables';
+
+.root {
+  padding: 17px 25px 25px 25px;
+  min-height: 30rem !important;
+
+  .users {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: calc(100% - 5rem);
+    overflow-y: auto;
+    position: absolute;
+    width: calc(100% - 50px);
+
+    @media (max-width: 991.98px) {
+      position: fixed;
+      height: calc(100% - 5rem);
+      width: calc(100% - 50px);
+    }
+
+    .user {
+      width: 100%;
+      margin-top: 13px;
+      display: flex;
+      align-items: center;
+      color: var(--text-color-primary) !important;
+
+      .avatar {
+        margin-right: 10px;
+        border-radius: 50%;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}

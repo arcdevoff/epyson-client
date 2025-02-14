@@ -1,0 +1,57 @@
+:root {
+  &.light {
+    --background-color: #f3f3f5;
+    --background-hover-secondary: rgba(19, 19, 20, 0.04);
+    --background-card: #ffffff;
+    --background-modal: #fff;
+
+    --main-color: #079bf9;
+    --main-color-hover: #33a7ff;
+
+    --button-primary: #0593ff;
+    --button-primary-hover: #33a7ff;
+    --button-secondary: rgba(24, 24, 26, 0.06);
+    --button-secondary-hover: rgba(24, 24, 26, 0.12);
+
+    --input-focused-bg: #fff;
+    --input-default-bg: #fafafc;
+
+    --separator: rgba(19, 19, 20, 0.16);
+
+    --text-color-primary: #000;
+    --text-color-secondary: #8a8a93;
+
+    --color-signal-positive-default: #30b03d;
+    --color-signal-negative-default: #f0303d;
+
+    --floating-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 0 1px rgba(0, 0, 0, 0.16);
+  }
+
+  &.dark {
+    --background-color: #09090a;
+    --background-hover-secondary: rgba(229, 229, 234, 0.05);
+    --background-card: #121212;
+    --background-modal: #262629;
+
+    --main-color: #079bf9;
+    --main-color-hover: #33a7ff;
+
+    --button-primary: #0593ff;
+    --button-primary-hover: #33a7ff;
+    --button-secondary: rgba(229, 229, 234, 0.08);
+    --button-secondary-hover: rgba(229, 229, 234, 0.16);
+
+    --input-focused-bg: #131314;
+    --input-default-bg: #1c1c1f;
+
+    --separator: rgba(229, 229, 234, 0.2);
+
+    --text-color-primary: #e5e5ea;
+    --text-color-secondary: #7d7d85;
+
+    --color-signal-positive-default: #33a03e;
+    --color-signal-negative-default: #d6333e;
+
+    --floating-shadow: 0 4px 20px rgba(0, 0, 0, 0.32), 0 0 0 1px #363636;
+  }
+}

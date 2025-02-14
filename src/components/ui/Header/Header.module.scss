@@ -1,0 +1,112 @@
+@import 'variables';
+
+.root {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  gap: 45px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 9px 0;
+  margin-top: -10px;
+  z-index: 100000;
+  background-color: var(--background-color);
+  margin-bottom: 1.2rem;
+
+  @media (max-width: 991.98px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .controlSidebarBtn {
+      display: none;
+
+      @media (max-width: 991.98px) {
+        display: block;
+        height: 27px;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .logo {
+    margin-left: 0.65rem;
+
+    a {
+      color: var(--text-color-primary);
+      font-size: 31px;
+      font-weight: 800;
+
+      &:hover {
+        color: var(--main-color);
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      margin-left: 5px;
+    }
+
+    @media (max-width: 767.98px) {
+      a {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .createPostButton {
+    width: 90px;
+    font-size: 16px;
+    margin-right: 10px;
+    line-height: 7px;
+    font-weight: 600;
+
+    @media (max-width: 991.98px) {
+      height: 40px;
+      width: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 0;
+    }
+
+    @media (max-width: 767.98px) {
+      height: 34px;
+      width: 40px;
+      border-radius: 10px;
+      background: none;
+      border: 1px solid var(--separator);
+
+      svg {
+        color: var(--text-color-primary);
+        margin-bottom: 1px;
+      }
+    }
+
+    svg {
+      display: none;
+
+      @media (max-width: 991.98px) {
+        display: block;
+      }
+    }
+
+    span {
+      @media (max-width: 991.98px) {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import 'variables';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--background-card);
+  border-radius: 10px;
+  box-shadow: var(--floating-shadow);
+  padding: 5px !important;
+  width: max-content;
+  z-index: 10000;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    background: none;
+    padding: 7px 12px !important;
+    width: 100%;
+    text-align: left;
+    border-radius: 7px;
+    color: var(--text-color-primary) !important;
+    font-size: 17px;
+
+    &:not(:first-child) {
+      margin-top: 2px;
+    }
+
+    svg {
+      padding: 0 10px 0 0 !important;
+    }
+
+    &:hover {
+      background-color: var(--background-hover-secondary) !important;
+
+      svg {
+        background: none !important;
+      }
+    }
+
+    img {
+      border-radius: 50%;
+      margin-right: 8.5px;
+    }
+
+    &.active {
+      color: var(--main-color) !important;
+      background-color: #079cf910;
+    }
+  }
+}

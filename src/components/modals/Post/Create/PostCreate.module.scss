@@ -1,0 +1,163 @@
+@import 'variables';
+
+.root {
+  padding: 17px 25px 25px 25px;
+
+  @media (max-width: 991.98px) {
+    margin-top: 0 !important;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    input {
+      margin-bottom: 1rem;
+    }
+
+    button[type='submit'] {
+      margin: 1rem 0 0.4rem 0;
+      height: 44px;
+      font-size: 15px;
+      font-weight: 600;
+
+      @media (max-width: 991.98px) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .topics {
+      position: relative;
+
+      .select {
+        width: 100%;
+        margin-top: 1rem;
+        background: var(--input-default-bg);
+        padding: 8px 14px;
+        border: 1px solid var(--separator);
+        border-radius: 12px;
+        color: var(--text-color-primary);
+        font-size: 16px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+
+        img {
+          margin-right: 8.5px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .tags {
+      margin-top: 1rem;
+
+      .tagInput {
+        display: flex;
+
+        .tagInputField {
+          width: 100%;
+        }
+      }
+
+      .tagSelected {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        .tag {
+          margin: 0px 5px 5px 0;
+          background-color: var(--background-card);
+          border: 1px solid var(--separator);
+          border-radius: 10px;
+          padding: 5px 5px 5px 9px;
+        }
+      }
+    }
+
+    .pickFileButton {
+      margin-top: 1rem;
+      width: 100%;
+      border: none;
+      display: block;
+      background: var(--input-default-bg);
+      padding: 30px 19px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid var(--separator);
+      border-radius: 12px;
+      color: var(--text-color-secondary);
+      font-size: 16px;
+      position: relative;
+
+      &:hover {
+        background-color: var(--input-focused-bg);
+      }
+
+      svg {
+        margin-bottom: 9px;
+        width: 29px;
+        height: 29px;
+      }
+
+      input {
+        cursor: pointer;
+        position: absolute;
+        width: 90%;
+        height: 80%;
+        top: 0;
+        opacity: 0;
+      }
+    }
+  }
+
+  .attachments {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    border-radius: 10px;
+    margin-top: 1.2rem;
+    padding: 0 5px 10px 5px;
+
+    .attachment {
+      position: relative;
+      margin-right: 10px;
+
+      img,
+      video {
+        object-fit: cover;
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+      }
+
+      .delete {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 3px;
+        top: 3px;
+        z-index: 1000000;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        height: 26px;
+        width: 26px;
+
+        svg {
+          width: 17px;
+          height: 17px;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+@import 'variables';
+
+.root {
+  .showBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 7px;
+    position: relative;
+
+    @media (max-width: 991.98px) {
+      display: none;
+    }
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    .unread {
+      position: absolute;
+      top: -3px;
+      right: -2px;
+      background: var(--color-signal-negative-default);
+      color: #fff;
+      width: 19px;
+      height: 19px;
+      display: flex;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .window {
+    position: absolute;
+    top: 4rem;
+    right: 0px;
+    background-color: var(--background-card);
+    border-radius: 15px;
+    box-shadow: var(--floating-shadow);
+    width: 23rem;
+    z-index: 100000;
+    height: 22rem;
+
+    @media (max-width: 991.98px) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .list {
+      overflow: auto;
+      height: 80%;
+      padding: 0 20px;
+
+      @media (max-width: 991.98px) {
+        position: fixed;
+        height: calc(100% - 6.5rem);
+        width: calc(100% - 39px);
+      }
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12.5px 20px;
+      background-color: var(--background-hover-secondary);
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+
+      .title {
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .actions {
+        height: 21px;
+        button {
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        .refetchButton {
+          padding: 0;
+          width: 21px;
+          height: 21px !important;
+
+          svg {
+            width: 21px;
+            height: 21px;
+          }
+        }
+      }
+    }
+  }
+}

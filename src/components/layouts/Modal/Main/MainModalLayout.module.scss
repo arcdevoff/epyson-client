@@ -1,0 +1,15 @@
+.root {
+  .header {
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .closeBtn {
+      position: absolute;
+      right: 8px;
+      top: 13px;
+    }
+  }
+}

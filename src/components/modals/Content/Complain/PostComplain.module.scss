@@ -1,0 +1,39 @@
+@import 'variables';
+
+.root {
+  padding: 17px 25px 25px 25px;
+
+  .complaints {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    .complaint {
+      cursor: pointer;
+      font-size: 17px;
+      margin-bottom: 13px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+
+      input[type='radio'] {
+        display: none;
+      }
+
+      .text {
+        margin-left: 10px;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .sendButton {
+    font-weight: 600;
+    font-size: 16px;
+    height: 43px;
+    margin-top: 1.3rem;
+  }
+}

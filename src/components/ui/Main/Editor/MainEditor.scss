@@ -1,0 +1,37 @@
+@import 'variables';
+
+.ql-container {
+  .ql-editor {
+    background: var(--input-default-bg) !important;
+    border: 1px solid var(--separator);
+    border-radius: 12px;
+    color: var(--text-color-primary) !important;
+    font-size: 16px;
+    min-height: 100px;
+    max-height: 200px;
+    word-break: break-all;
+
+    &.ql-blank::before {
+      color: var(--text-color-secondary) !important;
+      font-style: normal;
+    }
+
+    &:focus {
+      background-color: var(--input-focused-bg) !important;
+    }
+  }
+  .ql-tooltip-editor {
+    input[type='text'] {
+      left: 0 !important;
+    }
+  }
+}
+
+.ql-bubble * {
+  box-sizing: border-box;
+  z-index: 10000;
+}
+
+.ql-container.ql-bubble:not(.ql-disabled) a::before {
+  position: absolute;
+}
